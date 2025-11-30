@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cadastro de Aluno</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+  
+</head>
+
+<body>
+    <div class="form-container container p-5 my-5 border d-flex flex-column justify-content-center align-items-center"
+        style="max-width: 700px; width: 100%;">
+        <h1 class="h1 mb-4 ">Cadastro de Aluno</h1>
+        <form class="needs-validation w-100" novalidate id="formulario-aluno">
+            <div id="msgSucesso" class="alert alert-success" role="alert" style="display:none;">
+                Cadastro realizado com sucesso!
+            </div>
+
+            <div class="form-floating mb-3 mt-3">
+                <input type="text" class="form-control" id="nome" placeholder="Insira seu nome" name="nome" required>
+                <label for="nome" class="form-label">Nome<span> *</span></label>
+
+            </div>
+
+            <div class="row ">
+                <div class="col-md-7">
+                    <div class="form-floating mb-3 mt-3">
+                        <input type="text" class="form-control" id="nomesocial" name="nomesocial"
+                            placeholder="Insira seu nome" social>
+                        <label for="nomesocial" class="form-label">Nome Social</label>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-floating mb-3 mt-3">
+
+                        <input list="generos" class="form-control" id="genero" placeholder="Gênero" name="genero">
+                        <datalist id="generos">
+                            <option value="Masculino">
+                            <option value="Feminino">
+                            <option value="Não-binário">
+                            <option value="Transgênero">
+                            <option value="Outro">
+                        </datalist>
+                        <label for="genero" class="form-label">Gênero</label>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-floating mb-3 mt-3">
+                        <input type="date" class="form-control" id="data" name="data" required>
+                        <label for="data" class="form-label">Data Nascimento<span> *</span></label>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-floating mb-3 mt-3">
+                <input type="text" class="form-control" id="filicacao" placeholder="Digite o nome do Responsável"
+                    name="filicacao" required>
+                <label for="filicacao" class="form-label">Filiação<span> *</span></label>
+            </div>
+
+            <div class="form-floating mb-3 mt-3">
+                <input type="text" class="form-control" id="endereco" placeholder="Digite o nome da rua" name="endereco"
+                    required>
+                <label for="endereco" class="form-label">Endereço<span> *</span></label>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="form-floating mb-3 mt-3">
+                        <input type="text" class="form-control" id="bairro" name="bairro"
+                            placeholder="Digite o seu bairro" required>
+                        <label for="bairro" class="form-label">Bairro<span> *</span></label>
+                    </div>
+                </div>
+                <div class="col-md mb-3">
+                    <div class="form-floating mb-3 mt-3">
+                        <input type="text" class="form-control" id="numero" name="numero"
+                            placeholder="Digite o seu bairro" required>
+                        <label for="numero" class="form-label">Número<span> *</span></label>
+
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="form-floating mb-3 mt-3">
+                        <input type="text" class="form-control" id="cep" name="cep" placeholder="Digite o seu cep"
+                            required>
+                        <label for="cep" class="form-label">CEP</label>
+                        <div id="erroCep" class="text-danger mt-1" style="display:none;">
+                            O cep deve ter exatamente 8 caracteres.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="form-floating mb-3 mt-3">
+                        <select class="form-select" name="curso" id="curso" placeholder="Digite seu curso"
+                            name="endereco" required>
+                            <option value="" selected disabled></option>
+                            <option value="ADS">Analise e Desenvolvimento de Sistemas</option>
+                            <option value="EngenhariaEl">Engenharia Elétrica</option>
+                        </select>
+                        <label for="curso" class="form-label">Curso
+                            <span> *</span></label>
+                    </div>
+
+                </div>
+                <div class="col mb-3">
+                    <div class="form-floating mb-3 mt-3">
+                        <input type="date" class="form-control" id="dataingresso" name="dataingresso" required>
+                        <label for="dataingresso" class="form-label">Data Ingresso<span> *</span></label>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="mb-3 form-floating mb-3 mt-3">
+
+                <input type="text" class="form-control" id="matricula" placeholder="Insira sua matrícula"
+                    name="matricula" required>
+                <label for="matricula" class="form-label">Matrícula<span> *</span></label>
+
+                <div id="erroMatricula" class="text-danger mt-1" style="display:none;">
+                    A matrícula deve ter exatamente 14 caracteres.
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
+                <button type="submit" class="btn btn-success btn-lg">Salvar</button>
+                <button type="reset" class="btn btn-secondary btn-lg">Limpar</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        (() => {
+            const forms = document.querySelectorAll('.needs-validation');
+            const hoje = new Date();
+            const dataFormatada = hoje.toISOString().split('T')[0];
+            document.getElementById("dataingresso").value = dataFormatada;
+
+            function validarFormulario(form) {
+                form.querySelectorAll('input, select').forEach(function (campo) {
+                    campo.setCustomValidity('');
+                });
+                form.classList.add('was-validated');
+                if (!form.checkValidity()) {
+                    const campoInvalido = form.querySelector(':invalid');
+                    if (campoInvalido) {
+                        campoInvalido.scrollIntoView({ behavior: "smooth", block: "center" });
+                    }
+                    return false;
+                }
+                return true;
+            }
+
+            function mostrarMensagemSucesso() {
+                const mensagem = document.getElementById("msgSucesso");
+                mensagem.style.display = "block";
+                window.scrollTo({ behavior: "smooth", top: 0 });
+                setTimeout(function () {
+                    mensagem.style.display = "none";
+                }, 3000);
+            }
+
+            function validarMatricula() {
+                const campo = document.getElementById("matricula");
+                const erro = document.getElementById("erroMatricula");
+                campo.addEventListener("input", function (e) {
+                    if (campo.value.length !== 14) {
+                        erro.style.display = "block";
+                        e.preventDefault();
+                        e.stopPropagation();
+                        campo.classList.add("is-invalid");
+                        campo.setCustomValidity("inválido");
+                    } else {
+                        erro.style.display = "none";
+                        campo.classList.remove("is-invalid");
+                        campo.setCustomValidity("");
+                    }
+                });
+            }
+
+            function validarCep() {
+                const campo = document.getElementById("cep");
+                const erro = document.getElementById("erroCep");
+                campo.addEventListener("input", function (e) {
+                    const somenteNumeros = /^[0-9]*$/.test(campo.value);
+                    if (!somenteNumeros) {
+                        erro.style.display = "block";
+                        erro.textContent = "O CEP deve conter apenas números.";
+                        campo.classList.add("is-invalid");
+                        campo.setCustomValidity("inválido");
+                        return;
+                    }
+                    if (campo.value.length !== 8) {
+                        erro.style.display = "block";
+                        erro.textContent = "O CEP deve conter exatamente 8 dígitos.";
+                        e.stopPropagation();
+                        campo.classList.add("is-invalid");
+                        campo.setCustomValidity("inválido");
+                        return;
+                    }
+                    erro.style.display = "none";
+                    campo.classList.remove("is-invalid");
+                    campo.setCustomValidity("");
+                });
+            }
+
+            Array.from(forms).forEach(function (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (validarFormulario(form)) {
+                        mostrarMensagemSucesso();
+                    }
+                }, false);
+            });
+
+            validarMatricula();
+            validarCep();
+
+        })();
+    </script>
+
+</body>
+
+</html>

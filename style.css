@@ -1,0 +1,41 @@
+
+        :root {
+
+            --bs-focus-ring-color: rgba(86, 172, 135, 0.45);
+            --bs-focus-border-color: #56ac87;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--bs-focus-border-color);
+            box-shadow: 0 0 0 0.25rem var(--bs-focus-ring-color);
+        }
+
+        body {
+            background-color: #f7f9fc;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .form-label span {
+            color: #dc3545;
+            font-weight: 600;
+        }
+
+        .h1 {
+            color: #56ac87
+        }
+  
